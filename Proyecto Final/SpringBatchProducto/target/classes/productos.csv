@@ -1,0 +1,21 @@
+id,nombre,descripcion,precio
+1,Colchon,SpringAir individual de 0.9m x 2.0m, 3650
+2,Silla,Madera de pino 0.5m x 0.5m, 500
+3,Taburete,Entramado de metal con asiento de madera de pino 0.6m x 0.5m, 300
+4,Mesa,Madera de pino 2.5m x 1.5m, 4000
+5,Alacena,Entramado de metal con niveles de comprimido 2.0m x 2.0m, 300
+6,Lavadora,Electrodomestico Samsung de 1.0m x 1.0m, 3200
+7,Television,Electrodomestico LG de 32 pulgadas, 5000
+8,Microondas,Electrodomestico Samsung 0.7m x 0.6m, 4300
+9,Sillon individual,Tela verde de 0.9m x 0.9m, 2800
+10,Sillon 2 plazas,Tela color gris de 1.8m x 0.9m, 4100
+11,Sillon 3 plazas,Tela color negro de 2.7m x 0.9m, 6200
+12,Librero,Entramado de metal con niveles de comprimido 2.0m x 2.0m, 3100
+13,Buro,Madera de pino 0.5m x 0.5m, 1500
+14,Bar,Comprimido 1.2m x 0.5m, 1200
+15,MiniBar,Electrodomestico 0.9m x 0.9m, 4000
+16,Cortineros,Plastico impermeable color blancas, 430
+17,Edredones,Algodon 50% y Poliester 50%, 3180
+18,Sabanas,Algodon 100%, 1000
+19,Almohadas,Relleno de plumas con tela de algodon,800
+20,Escritorio,Entramado de metal con madera de pino 1.8m x 0.8m, 1500
