@@ -16,6 +16,7 @@ Examen 3/SpringBootProducto/mvnw.cmd
 Examen 3/SpringBootProducto/.mvn/wrapper/maven-wrapper.jar
 Proyecto Final/SpringBootProducto/.mvn/wrapper/maven-wrapper.jar
 Proyecto Final/SpringBootProducto/.mvn/wrapper/maven-wrapper.properties
+<<<<<<< Updated upstream
 Proyecto Final/.metadata/.log
 Proyecto Final/.metadata/.plugins/org.eclipse.core.resources/.history/13/b01ce0ca3423001d1c47a9ded8333739
 Proyecto Final/.metadata/.plugins/org.eclipse.core.resources/.history/1a/4025c51a3523001d1c47a9ded8333739
@@ -348,3 +349,11 @@ Proyecto Final/SpringBatchProducto/.classpath
 Proyecto Final/SpringBatchProducto/.settings/org.eclipse.core.resources.prefs
 Proyecto Final/SpringBatchProducto/.settings/org.eclipse.jdt.core.prefs
 Proyecto Final/SpringBatchProducto/.settings/org.eclipse.m2e.core.prefs
+=======
+Proyecto Final/SpringBatchProducto/.settings/org.eclipse.core.resources.prefs
+Proyecto Final/SpringBatchProducto/.settings/org.eclipse.jdt.core.prefs
+Proyecto Final/SpringBatchProducto/.settings/org.eclipse.m2e.core.prefs
+Proyecto Final/RestClientProducto/.mvn/wrapper/maven-wrapper.jar
+Proyecto Final/RestClientProducto/.mvn/wrapper/maven-wrapper.jar
+Proyecto Final/SpringBatchProducto/.classpath
+>>>>>>> Stashed changes
