@@ -45,7 +45,7 @@
 				</tr>
 				
 				<!-- loop over and print our customers -->
-				<c:forEach var="tempProducto" items="${producto}">
+				<c:forEach var="tempProducto" items="${productos}">
 				
 					<!-- construct an "update" link with customer id -->
 					<c:url var="updateLink" value="/producto/showFormForUpdate">
@@ -58,9 +58,9 @@
 					</c:url>					
 					
 					<tr>
-						<td> ${tempProducto.Nombre} </td>
-						<td> ${tempProducto.Descripcion} </td>
-						<td> ${tempProducto.Precio} </td>
+						<td> ${tempProducto.nombre} </td>
+						<td> ${tempProducto.descripcion} </td>
+						<td> ${tempProducto.precio} </td>
 						
 						<td>
 							<!-- display the update link -->

@@ -12,21 +12,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.client.rest.model.Producto;
-import com.client.rest.service.CustomerService;
+import com.client.rest.service.ProductoService;
 
 @Controller
-@RequestMapping("/productos")
-public class CustomerController {
+@RequestMapping("/producto")
+public class ProductoController {
 
 	// need to inject our customer service
 	@Autowired
-	private CustomerService customerService;
+	private ProductoService productoService;
 	
 	@GetMapping("/lista")
 	public String listsProductos(Model theModel) {
 		
 		// get customers from the service
-		List<Producto> theProductos = customerService.getProductos();
+		List<Producto> theProductos = productoService.getProductos();
 				
 		// add the customers to the model
 		theModel.addAttribute("productos", theProductos);
@@ -49,31 +49,31 @@ public class CustomerController {
 	public String saveProducto(@ModelAttribute("producto") Producto theProducto) {
 		
 		// save the customer using our service
-		customerService.saveProducto(theProducto);	
+		productoService.saveProducto(theProducto);	
 		
-		return "redirect:/productos/lista";
+		return "redirect:/producto/lista";
 	}
 	
 	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("productoId") int theId,
 									Model theModel) {
 		
-		// get the customer from our service
-		Producto theProducto = customerService.getProducto(theId);	
+		// obtener el producto de nuestro service
+		Producto theProducto = productoService.getProducto(theId);	
 		
-		// set customer as a model attribute to pre-populate the form
-		theModel.addAttribute("customer", theProducto);
+		// crear un producto como un modelo para enviar a the form
+		theModel.addAttribute("producto", theProducto);
 		
-		// send over to our form		
-		return "customer-form";
+		// enviarlo a jsp		
+		return "producto-form";
 	}
 	
 	@GetMapping("/delete")
 	public String deleteProducto(@RequestParam("productoId") int theId) {
 		
-		// delete the customer
-		customerService.deleteProducto(theId);
+		// borrar un producto
+		productoService.deleteProducto(theId);
 		
-		return "redirect:/productos/lista";
+		return "redirect:/producto/lista";
 	}
 }

@@ -3,7 +3,7 @@ package com.client.rest.service;
 import java.util.List;
 import com.client.rest.model.Producto;
 
-public interface CustomerService {
+public interface ProductoService {
 
 	public List<Producto> getProductos();
 

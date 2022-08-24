@@ -11,11 +11,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.client.rest.model.Employee;
 import com.client.rest.model.Producto;
 
 @Service
-public class CustomerServiceRestClientImpl implements CustomerService {
+public class ProductoServiceRestClientImpl implements ProductoService {
 
 	private RestTemplate restTemplate;
 
@@ -24,7 +23,7 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 	private Logger logger = Logger.getLogger(getClass().getName());
 	
 	@Autowired
-	public CustomerServiceRestClientImpl(RestTemplate theRestTemplate, 
+	public ProductoServiceRestClientImpl(RestTemplate theRestTemplate, 
 										@Value("${crm.rest.url}") String theUrl) {
 		
 		restTemplate = theRestTemplate;
@@ -39,12 +38,12 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 		logger.info("***OBTENER LISTA DE PRODUCTOS DESDE EL SERVICE REST PRODUCTO");
 		logger.info("in getProductos(): Calling REST API " + crmRestUrl);
 
-		// make REST call
+		// hacer una llamada al servicio REST
 		ResponseEntity<List<Producto>> responseEntity = 
 											restTemplate.exchange(crmRestUrl, HttpMethod.GET, null, 
 													 new ParameterizedTypeReference<List<Producto>>() {});
 
-		// get the list of customers from response
+		// obtener lista de productos de la respuesta
 		List<Producto> productos = responseEntity.getBody();
 
 		logger.info("in getProductos(): productos" + productos);
@@ -58,7 +57,7 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 
 		logger.info("in getProducto(): Calling REST API " + crmRestUrl);
 
-		// make REST call
+		// hacer una llamada al servicio REST
 		Producto theProducto = 
 				restTemplate.getForObject(crmRestUrl + "/" + theId, 
 						Producto.class);
@@ -75,7 +74,7 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 		
 		int productoId = theProducto.getId();
 
-		// make REST call
+		// hacer una llamada al servicio REST
 		if (productoId == 0) {
 			// add employee
 			logger.info("***SALVAR UN PRODUCTO DESDE EL SERVICE REST PRODUCTO");
@@ -83,7 +82,7 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 			restTemplate.postForEntity(crmRestUrl, theProducto, String.class);			
 		
 		} else {
-			// update employee
+			// update producto
 			logger.info("***ACTUALIZAR UN PRODUCTO DESDE EL SERVICE REST PRODUCTO");
 
 			restTemplate.put(crmRestUrl, theProducto);
@@ -98,7 +97,7 @@ public class CustomerServiceRestClientImpl implements CustomerService {
 
 		logger.info("in deleteProducto(): Calling REST API " + crmRestUrl);
 
-		// make REST call
+		// hacer una llamada al servicio REST
 		restTemplate.delete(crmRestUrl + "/" + theId);
 
 		logger.info("in deleteProducto(): deleted producto theId=" + theId);

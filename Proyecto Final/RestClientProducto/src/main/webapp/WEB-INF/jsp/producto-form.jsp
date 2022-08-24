@@ -12,7 +12,7 @@
 
 	<link type="text/css"
 		  rel="stylesheet"
-		  href="${pageContext.request.contextPath}/css/add-customer-style.css">
+		  href="${pageContext.request.contextPath}/css/producto-style.css">
 </head>
 
 <body>
@@ -63,7 +63,7 @@
 		<div style="clear; both;"></div>
 		
 		<p>
-			<a href="${pageContext.request.contextPath}/productos/lista">Volver a lista</a>
+			<a href="${pageContext.request.contextPath}/producto/lista">Volver a lista</a>
 		</p>
 	
 	</div>

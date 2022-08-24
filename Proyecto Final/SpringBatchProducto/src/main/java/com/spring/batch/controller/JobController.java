@@ -22,7 +22,7 @@ public class JobController {
     @Autowired
     private Job job;
 
-    @PostMapping("/importCustomers")
+    @PostMapping("/importProductos")
     public void importCsvToDBJob() {
     	
     	long horaInicio = System.currentTimeMillis();
